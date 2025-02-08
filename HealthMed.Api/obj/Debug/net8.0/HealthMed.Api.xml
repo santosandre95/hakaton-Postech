@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HealthMed.Api</name>
+    </assembly>
+    <members>
+        <member name="M:HealthMed.Api.Controllers.AgendamentoController.ListarMedicos">
+            <summary>
+            Lista todos os médicos.
+            </summary>
+            <returns>Uma lista de médicos.</returns>
+            <response code="200">Lista de médicos retornada com sucesso!</response>
+            <response code="404">Nenhum médico encontrado :(</response>
+        </member>
+        <member name="M:HealthMed.Api.Controllers.AgendamentoController.ListarAgendamentos(System.Int32,HealthMed.Api.StatusAgendamento)">
+            <summary>
+            Lista todos os agendamentos de um médico.
+            </summary>
+            <param name="medicoId">Id do médico.</param>
+            <param name="status">Status dos agendamentos.</param>
+            <returns>Uma lista de agendamentos.</returns>
+            <response code="200">Lista de agendamentos retornada com sucesso!</response>
+            <response code="404">Nenhum agendamento encontrado :(</response>
+        </member>
+        <member name="M:HealthMed.Api.Controllers.AgendamentoController.ObterHorariosDisponiveis(System.Int32,System.DateTime)">
+            <summary>
+            Obtém horários disponíveis de um médico.
+            </summary>
+            <param name="medicoId">Id do médico.</param>
+            <param name="data">Data desejada.</param>
+            <returns>Uma lista de horários disponíveis.</returns>
+            <response code="200">Horários disponíveis retornados com sucesso!</response>
+            <response code="404">Nenhum horário disponível encontrado :(</response>
+        </member>
+        <member name="M:HealthMed.Api.Controllers.AgendamentoController.CriarAgendamento(HealthMed.Api.Dtos.CadastroAgendamentoDto)">
+            <summary>
+            Cria um novo agendamento.
+            </summary>
+            <param name="dto">Dados do agendamento.</param>
+            <returns>Confirmação de agendamento.</returns>
+            <response code="200">Agendamento realizado com sucesso!</response>
+            <response code="400">Erro ao realizar o agendamento :(</response>
+        </member>
+        <member name="M:HealthMed.Api.Controllers.AgendamentoController.Aceitar(System.Int32)">
+            <summary>
+            Aceita um agendamento.
+            </summary>
+            <param name="id">Id do agendamento.</param>
+            <returns>Confirmação de aceitação.</returns>
+            <response code="200">Agendamento aceito com sucesso!</response>
+            <response code="400">Erro ao aceitar o agendamento :(</response>
+        </member>
+        <member name="M:HealthMed.Api.Controllers.AgendamentoController.Rejeitar(System.Int32)">
+            <summary>
+            Rejeita um agendamento.
+            </summary>
+            <param name="id">Id do agendamento.</param>
+            <returns>Confirmação de rejeição.</returns>
+            <response code="200">Agendamento rejeitado com sucesso!</response>
+            <response code="400">Erro ao rejeitar o agendamento :(</response>
+        </member>
+        <member name="M:HealthMed.Api.Controllers.AgendamentoController.Cancelar(System.Int32,System.String)">
+            <summary>
+            Cancela um agendamento.
+            </summary>
+            <param name="id">Id do agendamento.</param>
+            <param name="motivoCancelamento">Motivo do cancelamento.</param>
+            <returns>Confirmação de cancelamento.</returns>
+            <response code="200">Agendamento cancelado com sucesso!</response>
+            <response code="400">Erro ao cancelar o agendamento :(</response>
+        </member>
+        <member name="M:HealthMed.Api.Controllers.LoginController.LoginMedico(HealthMed.Api.Dtos.LoginMedicoDto)">
+            <summary>
+            Realiza o login de um médico.
+            </summary>
+            <param name="model">Dados de login do médico.</param>
+            <returns>Token de autenticação.</returns>
+            <response code="200">Login realizado com sucesso!</response>
+            <response code="400">CRM e Senha são obrigatórios :(</response>
+            <response code="401">CRM ou senha inválidos :(</response>
+        </member>
+        <member name="M:HealthMed.Api.Controllers.LoginController.LoginPaciente(HealthMed.Api.Dtos.LoginPacienteDto)">
+            <summary>
+            Realiza o login de um paciente.
+            </summary>
+            <param name="model">Dados de login do paciente.</param>
+            <returns>Token de autenticação.</returns>
+            <response code="200">Login realizado com sucesso!</response>
+            <response code="400">CPF e Senha são obrigatórios :(</response>
+            <response code="401">CPF ou senha inválidos :(</response>
+        </member>
+        <member name="M:HealthMed.Api.Controllers.MedicoController.CadastrarMedico(HealthMed.Api.Dtos.CadastroMedicoDto)">
+            <summary>
+            Cadastra um novo médico.
+            </summary>
+            <param name="model">Dados de cadastro do médico.</param>
+            <returns>Confirmação de cadastro.</returns>
+            <response code="200">Médico cadastrado com sucesso!</response>
+            <response code="400">E-mail já cadastrado :(</response>
+        </member>
+        <member name="M:HealthMed.Api.Controllers.MedicoController.GetPerfil">
+            <summary>
+            Obtém o perfil do médico logado.
+            </summary>
+            <returns>Dados do perfil do médico.</returns>
+            <response code="200">Perfil do médico retornado com sucesso!</response>
+            <response code="404">Médico não encontrado :(</response>
+        </member>
+        <member name="M:HealthMed.Api.Controllers.MedicoController.AtualizarMedico(HealthMed.Api.Dtos.AtualizarMedicoDto)">
+            <summary>
+            Atualiza os dados do médico logado.
+            </summary>
+            <param name="model">Dados de atualização do médico.</param>
+            <returns>Confirmação de atualização.</returns>
+            <response code="200">Dados atualizados com sucesso!</response>
+            <response code="400">Erro ao atualizar :(</response>
+        </member>
+        <member name="M:HealthMed.Api.Controllers.MedicoController.DeletarMedico">
+            <summary>
+            Deleta a conta do médico logado.
+            </summary>
+            <returns>Confirmação de exclusão.</returns>
+            <response code="200">Médico deletado com sucesso!</response>
+            <response code="400">Erro ao deletar conta :(</response>
+        </member>
+        <member name="M:HealthMed.Api.Controllers.PacienteController.CadastrarPaciente(HealthMed.Api.Dtos.CadastroPacienteDto)">
+            <summary>
+            Cadastra um novo paciente.
+            </summary>
+            <param name="model">Dados de cadastro do paciente.</param>
+            <returns>Confirmação de cadastro.</returns>
+            <response code="200">Paciente cadastrado com sucesso!</response>
+            <response code="400">E-mail já cadastrado :(</response>
+        </member>
+        <member name="M:HealthMed.Api.Controllers.PacienteController.GetPerfil">
+            <summary>
+            Obtém o perfil do paciente logado.
+            </summary>
+            <returns>Dados do perfil do paciente.</returns>
+            <response code="200">Perfil do paciente retornado com sucesso!</response>
+            <response code="404">Paciente não encontrado :(</response>
+        </member>
+        <member name="M:HealthMed.Api.Controllers.PacienteController.AtualizarPaciente(HealthMed.Api.Dtos.AtualizarPacienteDto)">
+            <summary>
+            Atualiza os dados do paciente logado.
+            </summary>
+            <param name="model">Dados de atualização do paciente.</param>
+            <returns>Confirmação de atualização.</returns>
+            <response code="200">Dados atualizados com sucesso!</response>
+            <response code="400">Erro ao atualizar :(</response>
+        </member>
+        <member name="M:HealthMed.Api.Controllers.PacienteController.DeletarPaciente">
+            <summary>
+            Deleta a conta do paciente logado.
+            </summary>
+            <returns>Confirmação de exclusão.</returns>
+            <response code="200">Paciente deletado com sucesso!</response>
+            <response code="400">Erro ao deletar conta :(</response>
+        </member>
+    </members>
+</doc>

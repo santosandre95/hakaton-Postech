@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "0P0+U3f3HomAYvn2Jj2GpnuDD7MqnT/GZ+MPD9b6UzU=",
+  "Source": "HealthMed.Api",
+  "BasePath": "_content/HealthMed.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
