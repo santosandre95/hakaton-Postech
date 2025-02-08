@@ -17,9 +17,8 @@ jobs:
       - name: Baixar imagem do Docker Hub
         run: docker pull ${{ secrets.DOCKER_USERNAME_IMAGE }}/healthmed-api:latest
 
-
       - name: Simular Deploy
         run: |
           echo "Rodando container..."
-          docker run -d -p 8080:80 --name healthmed-api ${{ secrets.DOCKER_USERNAME_IMAGE}}//healthmed-api:latest
+          docker run -d -p 8080:80 --name healthmed-api ${{ secrets.DOCKER_USERNAME_IMAGE }}/healthmed-api:latest
           echo "Deploy Simulado com sucesso!"
