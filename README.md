@@ -34,7 +34,7 @@ docker-compose -f HealthMed.Api/docker-compose.yaml up -d
 ## 🐳 Gerando a imagem Docker 
 Antes de inciar os Pods do Kubernets  dar o build da imagem usando **Docker build**, execute:
 ```sh
-docker build -t healthmed-api -f HealthME=ed.Api/Dockerfile .
+docker build -t healthmed-api -f HealthMed.Api/Dockerfile .
 ```
 
 ## ☸️ Simulando no Kubernetes
